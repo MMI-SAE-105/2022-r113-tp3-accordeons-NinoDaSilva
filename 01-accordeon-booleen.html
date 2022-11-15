@@ -9,6 +9,7 @@
   </head>
   <body>
     <h1>Accordéon avec des booléens</h1>
+    <accordeon>
       <section x-data="{isOpen: false}">
         <button @click="isOpen = ! isOpen">bouton 1</button>
         <p x-show="isOpen" x-transition.duration.800ms>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, a obcaecati totam asperiores accusantium minima dolor incidunt voluptate eius iste voluptatibus ipsa libero vero suscipit. Totam quod sequi sed mollitia?</p>
@@ -21,6 +22,6 @@
         <button @click="isOpen = ! isOpen">bouton 3</button>
         <p x-show="isOpen" x-transition.duration.800ms>Aliquid reprehenderit quibusdam vel quae alias? Sint deleniti ea explicabo facilis dolor! Quasi error animi tenetur quo blanditiis at unde, vel alias ea officiis, dolores in ipsum rerum cupiditate nulla?</p>
       </section>
-    </div>
+    </accordeon>
   </body>
 </html>
