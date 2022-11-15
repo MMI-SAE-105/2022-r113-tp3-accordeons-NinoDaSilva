@@ -5,21 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
   </head>
   <body>
     <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
-    <accordeon>
+    <accordeon x-data="{isOpen: false}">
       <section>
-        <button>bouton 1</button>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolorem esse dolore eius sunt tempore cupiditate sed numquam iste assumenda soluta consectetur distinctio, quam voluptates ipsum rerum natus aliquid veniam.</p>
+        <button @click="isOpen = 1">bouton 1</button>
+        <p x-show="isOpen === 1" x-transition.scale.origin.top>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, a obcaecati totam asperiores accusantium minima dolor incidunt voluptate eius iste voluptatibus ipsa libero vero suscipit. Totam quod sequi sed mollitia?</p>
       </section>
       <section>
-        <button>bouton 2</button>
-        <p>Harum, sunt ea perspiciatis facilis repellendus ipsam error sint praesentium ipsa, corporis eum vero deleniti temporibus! Ducimus excepturi est magni possimus nostrum id, repellendus nihil itaque officiis sed voluptates alias?</p>
+        <button @click="isOpen = 2">bouton 2</button>
+        <p x-show="isOpen === 2" x-transition.scale.origin.top>Fugiat dignissimos nesciunt ex doloribus laborum natus temporibus hic, quos reprehenderit fuga sint tempora tempore officia vitae et reiciendis praesentium cupiditate incidunt repudiandae eaque suscipit accusantium adipisci! Quod, exercitationem dolores.</p>
       </section>
       <section>
-        <button>bouton 3</button>
-        <p>Dolorem, ipsum! Amet, sapiente placeat! Nobis quae rem, ipsum dolor quibusdam excepturi quas, repellat eos sequi temporibus exercitationem, debitis voluptatum in deserunt? Molestiae eos fugit ipsum qui harum blanditiis nobis.</p>
+        <button @click="isOpen = 3">bouton 3</button>
+        <p x-show="isOpen === 3" x-transition.scale.origin.top>Aliquid reprehenderit quibusdam vel quae alias? Sint deleniti ea explicabo facilis dolor! Quasi error animi tenetur quo blanditiis at unde, vel alias ea officiis, dolores in ipsum rerum cupiditate nulla?</p>
       </section>
     </accordeon>
   </body>
