@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Accordéon avec x-collapse</title>
   </head>
   <body>
@@ -11,15 +13,15 @@
     <accordeon x-data="{isOpen: false}">
       <section>
         <button @click="isOpen = 1">bouton 1</button>
-        <p x-show="isOpen === 1" x-transition.scale.origin.top>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, a obcaecati totam asperiores accusantium minima dolor incidunt voluptate eius iste voluptatibus ipsa libero vero suscipit. Totam quod sequi sed mollitia?</p>
+        <p x-show="isOpen === 1" x-collapse>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, a obcaecati totam asperiores accusantium minima dolor incidunt voluptate eius iste voluptatibus ipsa libero vero suscipit. Totam quod sequi sed mollitia?</p>
       </section>
       <section>
         <button @click="isOpen = 2">bouton 2</button>
-        <p x-show="isOpen === 2" x-transition.scale.origin.top>Fugiat dignissimos nesciunt ex doloribus laborum natus temporibus hic, quos reprehenderit fuga sint tempora tempore officia vitae et reiciendis praesentium cupiditate incidunt repudiandae eaque suscipit accusantium adipisci! Quod, exercitationem dolores.</p>
+        <p x-show="isOpen === 2" x-collapse>Fugiat dignissimos nesciunt ex doloribus laborum natus temporibus hic, quos reprehenderit fuga sint tempora tempore officia vitae et reiciendis praesentium cupiditate incidunt repudiandae eaque suscipit accusantium adipisci! Quod, exercitationem dolores.</p>
       </section>
       <section>
         <button @click="isOpen = 3">bouton 3</button>
-        <p x-show="isOpen === 3" x-transition.scale.origin.top>Aliquid reprehenderit quibusdam vel quae alias? Sint deleniti ea explicabo facilis dolor! Quasi error animi tenetur quo blanditiis at unde, vel alias ea officiis, dolores in ipsum rerum cupiditate nulla?</p>
+        <p x-show="isOpen === 3" x-collapse>Aliquid reprehenderit quibusdam vel quae alias? Sint deleniti ea explicabo facilis dolor! Quasi error animi tenetur quo blanditiis at unde, vel alias ea officiis, dolores in ipsum rerum cupiditate nulla?</p>
       </section>
     </accordeon>
   </body>

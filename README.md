@@ -1,3 +1,3 @@
 - nom : DA SILVA
 - prénom : Nino
-- URL publique du site : http://localhost:1234
+- URL publique du site : https://tp-accordeon-ndsa.netlify.app/
