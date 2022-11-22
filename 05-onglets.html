@@ -8,5 +8,15 @@
   </head>
   <body>
     <h1>Onglets</h1>
+    <ul id="onglets" x-data="{onglet: 1}">
+      <li :class="{'actif': onglet === 1}">
+        <button @click="onglet = 1">Lorem, ipsum dolor.</button>
+      </li>
+      <li :class="{'actif': onglet === 2}">
+        <button @click="onglet = 2">Numquam, nemo dolorum?</button>
+      </li>
+      <li :class="{'actif': onglet === 3}">
+        <button @click="onglet = 3">Doloribus, alias quam?</button>
+      </li>
   </body>
 </html>
