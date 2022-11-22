@@ -4,19 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="onglets.css" />
     <title>Onglets</title>
   </head>
   <body>
     <h1>Onglets</h1>
     <ul id="onglets" x-data="{onglet: 1}">
       <li :class="{'actif': onglet === 1}">
-        <button @click="onglet = 1">Lorem, ipsum dolor.</button>
+        <button @click="onglet = 1">Onglet 1</button>
       </li>
       <li :class="{'actif': onglet === 2}">
-        <button @click="onglet = 2">Numquam, nemo dolorum?</button>
+        <button @click="onglet = 2">Onglet 2</button>
       </li>
       <li :class="{'actif': onglet === 3}">
-        <button @click="onglet = 3">Doloribus, alias quam?</button>
+        <button @click="onglet = 3">Onglet 3</button>
       </li>
+    </ul>
+
+    <div id="content" class="content">
+      <div role="tabpanel" :class="{'actif': onglet === 1}">
+        <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div role="tabpanel2" :class="{'actif': onglet === 2}">
+        <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div role="tabpanel3" :class="{'actif': onglet === 3}">
+        <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
   </body>
 </html>
