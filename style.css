@@ -1,6 +1,6 @@
 #accordeon {
     /* pour que les éléments soient alignés horizontalement */
-    align-content: horizontal;
+    display: flex;
     /* pour éviter les marges par défaut */
     margin: 5px;
     /* pour éviter les "padding" par défaut */
@@ -8,7 +8,6 @@
 }
 
 #accordeon li {
-    display: inline-block;
     /* largeur de chaque élément replié 107px */
     width: 107px;
     /* pour cacher le contenu dépassant de l'élément */
@@ -36,9 +35,14 @@
     /* pour éviter les marges par défaut */
     margin: 0;
     /* pour que les éléments soient alignés horizontalement */
-    align-content: horizontal;
+    display: flex;
     /* largeur de l'élément intrérieur de 317px (= déplié) */
-    max-width: 317px;
+    width: 317px;
+}
+
+#accordeon li figure img {
+    width: 107px;
+    height: 107px;
 }
 
 #accordeon li figure figcaption {
@@ -47,13 +51,13 @@
     /* pour espacer le texte, padding de 10px */
     padding: 10px;
     /* pour que les éléments soient alignés verticalement */
-    align-content: vertical;
+    vertical-align: center;
     /* espace entre les éléments */
-    align-content: space-between;
+    align-items: space-between;
 }
 
 /* Sur tous les enfants de figcation */
-#accordeon li figure figcaption > * {
+#accordeon li figure figcaption {
     /* pour éviter les marges par défaut */
     margin: 0;
     /* pour éviter les "padding" par défaut */
