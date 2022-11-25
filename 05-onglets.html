@@ -10,28 +10,35 @@
   </head>
   <body>
     <h1>Onglets</h1>
-    <ul id="onglets" x-data="{onglet: 1}">
-      <li :class="{'actif': onglet === 1}">
-        <button @click="onglet = 1">Onglet 1</button>
-      </li>
-      <li :class="{'actif': onglet === 2}">
-        <button @click="onglet = 2">Onglet 2</button>
-      </li>
-      <li :class="{'actif': onglet === 3}">
-        <button @click="onglet = 3">Onglet 3</button>
-      </li>
-    </ul>
 
-    <div id="content" class="content">
-      <div role="tabpanel" :class="{'actif': onglet === 1}">
-        <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      <div role="tabpanel2" :class="{'actif': onglet === 2}">
-        <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div>
-      <div role="tabpanel3" :class="{'actif': onglet === 3}">
-        <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div id="onglets" x-data="{ouvert: 1}">
+      <ul role="tablist">
+        <li role="tab" :class="{'actif': onglet === 1}">
+          <button @click="onglet = 1">Onglet 1</button>
+        </li>
+        <li role="tab" :class="{'actif': onglet === 2}">
+          <button @click="onglet = 2">Onglet 2</button>
+        </li>
+        <li role="tab" :class="{'actif': onglet === 3}">
+          <button @click="onglet = 3">Onglet 3</button>
+        </li>
+      </ul>
+
+      <div id="content">
+        <div role="tabpane1" :class="{'actif': onglet === 1}">
+          <h1>section 1</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ullam eum vitae tenetur reiciendis dolore quos blanditiis sapiente recusandae explicabo animi, odio architecto laboriosam? Mollitia rerum pariatur et sunt voluptatem.</p>
+        </div>
+        <div role="tabpane2" :class="{'actif': onglet === 2}">
+          <h1>section 2</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quod consectetur veniam dolorem aspernatur dolor ducimus impedit at modi consequuntur accusamus dolore atque adipisci similique velit iure, voluptatum ea ratione?</p>
+        </div>
+        <div role="tabpane3" :class="{'actif': onglet === 3}">
+          <h1>section 3</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit earum eos rerum ex in necessitatibus aspernatur sint iure numquam autem porro, veniam molestiae at deleniti beatae! Ducimus maiores laudantium nemo.</p>
+        </div>
       </div>
     </div>
+    
   </body>
 </html>
