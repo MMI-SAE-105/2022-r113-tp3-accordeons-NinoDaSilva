@@ -11,30 +11,30 @@
   <body>
     <h1>Onglets</h1>
 
-    <div id="onglets" x-data="{ouvert: 1}">
+    <div id="onglets" x-data="{ouvert: 1,}">
       <ul role="tablist">
         <li role="tab" :class="{'actif': onglet === 1}">
-          <button @click="onglet = 1">Onglet 1</button>
+          <button @click="onglet = 1, ouvert = 1">Onglet 1</button>
         </li>
         <li role="tab" :class="{'actif': onglet === 2}">
-          <button @click="onglet = 2">Onglet 2</button>
+          <button @click="onglet = 2, ouvert = 2">Onglet 2</button>
         </li>
         <li role="tab" :class="{'actif': onglet === 3}">
-          <button @click="onglet = 3">Onglet 3</button>
+          <button @click="onglet = 3, ouvert = 3">Onglet 3</button>
         </li>
       </ul>
 
       <div id="content">
-        <div role="tabpanel" x-show="ouvert === 1">
-          <h1>section 1</h1>
+        <div role="tabpanel" x-show="ouvert === 1" x-transition>
+          <h1>Panneau 1</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ullam eum vitae tenetur reiciendis dolore quos blanditiis sapiente recusandae explicabo animi, odio architecto laboriosam? Mollitia rerum pariatur et sunt voluptatem.</p>
         </div>
-        <div role="tabpanel" x-show="ouvert === 2">
-          <h1>section 2</h1>
+        <div role="tabpanel" x-show="ouvert === 2" x-transition>
+          <h1>Panneau 2</h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quod consectetur veniam dolorem aspernatur dolor ducimus impedit at modi consequuntur accusamus dolore atque adipisci similique velit iure, voluptatum ea ratione?</p>
         </div>
-        <div role="tabpanel" x-show="ouvert === 3">
-          <h1>section 3</h1>
+        <div role="tabpanel" x-show="ouvert === 3" x-transition>
+          <h1>Panneau 3</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit earum eos rerum ex in necessitatibus aspernatur sint iure numquam autem porro, veniam molestiae at deleniti beatae! Ducimus maiores laudantium nemo.</p>
         </div>
       </div>
