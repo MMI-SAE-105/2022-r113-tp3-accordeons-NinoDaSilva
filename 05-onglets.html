@@ -13,18 +13,18 @@
 
     <div id="onglets" x-data="{ouvert: 1,}">
       <ul role="tablist">
-        <li role="tab" :class="{'actif': onglet === 1}">
-          <button @click="onglet = 1, ouvert = 1">Onglet 1</button>
+        <li role="tab" :class="{'actif': ouvert === 1}" @click="ouvert = 1">
+          <label>Onglet 1</label>
         </li>
-        <li role="tab" :class="{'actif': onglet === 2}">
-          <button @click="onglet = 2, ouvert = 2">Onglet 2</button>
+        <li role="tab" :class="{'actif': ouvert === 2}" @click=" ouvert = 2">
+          <label>Onglet 2</label>
         </li>
-        <li role="tab" :class="{'actif': onglet === 3}">
-          <button @click="onglet = 3, ouvert = 3">Onglet 3</button>
+        <li role="tab" :class="{'actif': ouvert === 3}" @click="ouvert = 3">
+          <label>Onglet 3</label>
         </li>
       </ul>
 
-      <div id="content">
+      <div id="panneau">
         <div role="tabpanel" x-show="ouvert === 1" x-transition>
           <h1>Panneau 1</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ullam eum vitae tenetur reiciendis dolore quos blanditiis sapiente recusandae explicabo animi, odio architecto laboriosam? Mollitia rerum pariatur et sunt voluptatem.</p>
