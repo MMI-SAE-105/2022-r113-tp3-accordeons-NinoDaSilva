@@ -20,11 +20,6 @@
     padding: 5px;
 }
 
-#onglets [role="tabpanel"] {
-    /* largeur de l'élément intrérieur de 317px (= déplié) */
-    width: 317px;
-}
-
 #onglets li:hover,
 #onglets li.actif {
     width: 85%;
