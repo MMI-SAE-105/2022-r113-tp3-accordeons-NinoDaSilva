@@ -21,17 +21,13 @@
 }
 
 #onglets li:hover,
-#onglets li.actif {
+#onglets li.ouvert {
     width: 85%;
-    background-color: #ccc;
 }
 
 #panneau {
     position: relative;
-}
-
-#panneau [role="tabpanel"] {
-    position: absolute;
     height: 100%;
-    width: 80%;
+    width: 90%;
+    margin: 0 auto;
 }
